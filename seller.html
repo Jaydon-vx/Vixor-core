@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seller Dashboard - Vixor Core</title>
+  <link rel="stylesheet" href="seller.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">Vixor Core</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="settings.html">Settings</a>
+    <a href="logout.html">Logout</a>
+  </nav>
+</header>
+
+<main class="seller-dashboard">
+
+  <h2>Seller Control Panel</h2>
+
+  <!-- Seller Identity -->
+  <section class="seller-identity">
+    <p><strong>Seller ID:</strong> <span id="sellerID">VX-SLR-000148</span></p>
+    <p><strong>Status:</strong> <span id="approvalStatus">✅ Approved</span></p>
+    <p><strong>Level:</strong> <span id="sellerLevel">Silver</span></p>
+    <p><strong>Account Type:</strong> Official Seller</p>
+  </section>
+
+  <!-- Seller Stats -->
+  <section class="seller-stats">
+    <div class="stat-box">
+      <h4>Total Products Listed</h4>
+      <p id="productCount">27</p>
+    </div>
+    <div class="stat-box">
+      <h4>Total Sales</h4>
+      <p id="salesCount">134</p>
+    </div>
+    <div class="stat-box">
+      <h4>Customer Rating</h4>
+      <p id="ratingScore">4.6 / 5 ⭐</p>
+    </div>
+  </section>
+
+  <!-- Document Upload -->
+  <section class="seller-docs">
+    <h3>Upload Verification</h3>
+    <p>Submit your valid ID and a live selfie for full verification.</p>
+    <input type="file" id="uploadID" accept="image/*,application/pdf"/>
+    <input type="file" id="uploadSelfie" accept="image/*"/>
+    <button id="submitDocsBtn">Submit to Vixor Admin</button>
+    <p id="uploadStatus"></p>
+  </section>
+
+  <!-- Customer Feedback -->
+  <section class="seller-feedback">
+    <h3>Recent Customer Comments</h3>
+    <ul id="feedbackList">
+      <li>"Delivery was fast and well packed!" – ⭐⭐⭐⭐</li>
+      <li>"Very helpful explanation, will buy again." – ⭐⭐⭐⭐⭐</li>
+      <li>"Support was slow, but product is great." – ⭐⭐⭐</li>
+    </ul>
+  </section>
+
+  <!-- Toggle Account View -->
+  <div class="toggle-view">
+    <button id="switchToUserBtn">Switch to Normal User View</button>
+  </div>
+
+</main>
+
+<script src="seller.js"></script>
+</body>
+</html>

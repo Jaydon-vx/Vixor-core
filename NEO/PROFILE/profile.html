@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Vixor Core</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Vixor Core</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="settings.html">Settings</a>
+    <a href="deposit.html">Deposit</a>
+    <a href="logout.html">Logout</a>
+  </nav>
+</header>
+
+<section class="profile-container">
+  <h2>User Profile</h2>
+
+  <!-- Avatar Upload Section -->
+  <div class="avatar-section">
+    <img src="images/default-avatar.png" alt="Avatar" id="avatarImg">
+    <input type="file" id="uploadAvatar" accept="image/*">
+  </div>
+
+  <!-- Profile Info Form -->
+  <form id="profileForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" value="Jaydon-VX" readonly>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" value="+2348000000000" readonly>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" value="example@email.com" readonly>
+
+    <label for="vixorId">Vixor ID:</label>
+    <input type="text" id="vixorId" value="VX-00123" readonly>
+
+    <button type="button" id="editProfileBtn">Edit Profile</button>
+  </form>
+</section>
+
+<script src="profile.js"></script>
+
+</body>
+</html>

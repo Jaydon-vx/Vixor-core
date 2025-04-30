@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vixor Core - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header>
+    <div class="logo">Vixor Core</div>
+    <nav>
+      <a href="#nexus" id="nav-nexus">Nexus</a>
+      <a href="#pulseai" id="nav-pulseai">PulseAI</a>
+      <a href="#skybots" id="nav-skybots">Innovations</a>
+      <a href="#media" id="nav-media">Media Center</a>
+      <div class="dropdown">
+        <button class="dropbtn">More</button>
+        <div class="dropdown-content">
+          <a href="settings.html" id="nav-settings">Settings</a>
+          <a href="mission.html" id="nav-mission">Mission</a>
+          <a href="token.html" id="nav-token">Token</a>
+          <a href="reserve.html" id="nav-reserve">Reserve</a>
+          <a href="roadmap.html" id="nav-roadmap">Roadmap</a>
+          <a href="help.html" id="nav-help">Help</a>
+          <a href="contact.html" id="nav-contact">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ✅ Rotating Message Section BELOW Header -->
+  <section class="rotating-banner">
+    <p id="rotatingText">🚀 Welcome to Vixor Core!</p>
+  </section>
+
+  <!-- Sidebar for Account Control -->
+  <button id="toggleSidebarBtn">☰</button>
+  <aside id="sidebar">
+    <a href="profile.html">Profile</a>
+    <a href="notifications.html">Notifications</a>
+    <a href="language.html">Language</a>
+    <a href="deposit.html">Deposit Funds</a>
+    <a href="#transact" id="nav-transact">Transact</a>
+    <a href="#fleet" id="nav-fleet">Drone Fleet</a>
+    <a href="logout.html">Logout</a>
+    <div id="clock"></div> <!-- Clock Display -->
+  </aside>
+
+  <!-- Color Theme Control -->
+  <div id="color-theme-slider">
+    <div class="color-handle" draggable="true"></div>
+  </div>
+
+  <!-- Search and Filter Section -->
+  <div class="search-filter-wrapper">
+    <input type="text" id="searchInput" placeholder="Search drones..." />
+    <select id="filterSelect">
+      <option value="all">All Categories</option>
+      <option value="SkyBots">SkyBots</option>
+      <option value="PulseAI">PulseAI</option>
+      <option value="Nexus">Nexus</option>
+      <option value="space tech">Space Tech</option>
+    </select>
+  </div>
+
+  <!-- Main Content Area for Products -->
+  <div class="container" id="content"></div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>Vixor Core &copy; 2025 | All rights reserved.</p>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="main.js"></script>
+
+  <!-- ✅ Rotating Banner Script -->
+  <script>
+    const rotatingMessages = [
+      "🚀 Welcome to Vixor Core!",
+      "💸 Would you like to deposit to your account?",
+      "🧾 Complete your profile to access more features!",
+      "🛰️ New drones launching weekly!",
+      "🎁 Invite friends to earn rewards!",
+      "🌍 Now supporting 20+ languages!",
+      "🔐 Stay safe: enable 2FA in settings!",
+      "🛠️ Join our AI Dev Program – coming soon!",
+      "💡 Tip: Click 'More' to see all extra features.",
+      "💬 VX AI bots now support voice response!"
+      
+    ];
+    let msgIndex = 0;
+    const rotatingText = document.getElementById("rotatingText");
+
+    setInterval(() => {
+      msgIndex = (msgIndex + 1) % rotatingMessages.length;
+      rotatingText.textContent = rotatingMessages[msgIndex];
+    }, 4000);
+  </script>
+
+  <!-- ✅ Optional Basic CSS (if not already in style.css) -->
+  <style>
+    .rotating-banner {
+      text-align: center;
+      background-color: #111;
+      padding: 12px 0;
+      font-size: 1.1rem;
+      color: #00ffff;
+      font-weight: 600;
+      font-weight: bolder;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+      animation: fadeIn 7.5s ease-in-out;
+    }
+  </style>
+
+</body>
+</html>

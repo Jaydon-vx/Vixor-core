@@ -1,0 +1,139 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+header {
+  background-color: #111;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #00ffff;
+}
+
+nav a {
+  color: #ccc;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #00ffff;
+}
+
+.profile-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #121212;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0,255,255,0.1);
+}
+
+.profile-container h2 {
+  font-size: 1.8rem;
+  color: #00ffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile-avatar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+}
+
+.profile-avatar button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #00ffff;
+  border: none;
+  color: #000;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.info-field {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-field label {
+  flex: 1;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.info-field input,
+.info-field span {
+  flex: 2;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  outline: none;
+}
+
+.info-field input[readonly] {
+  opacity: 0.6;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  height: 15px;
+  width: 100%;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, #00ffff, #007777);
+  transition: width 0.4s ease-in-out;
+}
+
+/* Button */
+#editProfileBtn {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  padding: 10px;
+  background-color: #00ffff;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#editProfileBtn:hover {
+  background-color: #00cccc;
+}

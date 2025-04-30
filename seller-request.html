@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join as Seller - Vixor Core</title>
+  <link rel="stylesheet" href="seller-request.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">Vixor Core</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="settings.html">Settings</a>
+    <a href="logout.html">Logout</a>
+  </nav>
+</header>
+
+<main class="seller-request">
+
+  <h2>Become an Official Vixor Seller</h2>
+  <p>Complete the form below to apply as a Vixor Core product partner.</p>
+
+  <form id="sellerRequestForm">
+    <!-- Email (readonly) -->
+    <label for="email">Your Registered Email:</label>
+    <input type="email" id="email" value="jaydonvx@gmail.com" readonly />
+
+    <!-- Shop/Company Name -->
+    <label for="shopName">Your Shop or Brand Name:</label>
+    <input type="text" id="shopName" required />
+
+    <!-- Why Join -->
+    <label for="reason">Why do you want to sell Vixor products?</label>
+    <textarea id="reason" rows="4" placeholder="Explain your interest..." required></textarea>
+
+    <!-- ID Upload -->
+    <label for="uploadID">Upload Valid ID (PDF or Image):</label>
+    <input type="file" id="uploadID" accept="application/pdf,image/*" required />
+
+    <!-- Selfie Upload -->
+    <label for="uploadSelfie">Upload Selfie (with same ID):</label>
+    <input type="file" id="uploadSelfie" accept="image/*" required />
+
+    <!-- Terms Checkbox -->
+    <div class="terms-box">
+      <input type="checkbox" id="agreeTerms" required />
+      <label for="agreeTerms">I confirm that this data is accurate and I accept Vixor Core's partner terms.</label>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit">Submit Application</button>
+    <p id="statusMsg"></p>
+  </form>
+
+</main>
+
+<script src="seller-request.js"></script>
+</body>
+</html>

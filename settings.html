@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings - Vixor Core</title>
+  <link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">Vixor Core</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="deposit.html">Deposit</a>
+    <a href="logout.html">Logout</a>
+  </nav>
+</header>
+
+<section class="settings-container">
+
+  <h2>Settings</h2>
+
+  <!-- Display Preferences -->
+  <div class="setting-item">
+    <label for="themeToggle">Dark/Light Mode</label>
+    <input type="checkbox" id="themeToggle">
+  </div>
+
+  <!-- Clock Display -->
+  <div class="setting-item">
+    <label for="clockToggle">Show/Hide Clock</label>
+    <input type="checkbox" id="clockToggle">
+  </div>
+
+  <!-- Language Switcher -->
+  <div class="setting-item">
+    <label for="languageSelector">Language</label>
+    <select id="languageSelector">
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="zh">中文</option>
+      <option value="ar">العربية</option>
+      <option value="ru">Русский</option>
+      <option value="ja">日本語</option>
+      <option value="pt">Português</option>
+      <option value="ko">한국어</option>
+    </select>
+  </div>
+
+  <!-- Notifications -->
+  <div class="setting-item">
+    <label>Notifications Sound</label>
+    <button id="toggleNotification">Enable/Disable</button>
+  </div>
+
+  <!-- Security -->
+  <div class="setting-item">
+    <label>Change Password</label>
+    <button id="changePasswordBtn">Change</button>
+  </div>
+
+  <!-- Privacy Settings -->
+  <div class="setting-item">
+    <label>Data Usage</label>
+    <button id="dataUsageBtn">View Data</button>
+  </div>
+
+  <!-- Location Settings -->
+  <div class="setting-item">
+    <label>Location Access</label>
+    <button id="locationAccessBtn">Toggle</button>
+  </div>
+
+  <!-- Timezone Control -->
+  <div class="setting-item">
+    <label>Time Zone</label>
+    <select id="timezoneSelector">
+      <option value="UTC">UTC</option>
+      <option value="Africa/Lagos">Africa/Lagos</option>
+      <option value="America/New_York">America/New York</option>
+      <option value="Europe/London">Europe/London</option>
+      <option value="Asia/Tokyo">Asia/Tokyo</option>
+    </select>
+  </div>
+
+  <!-- Connected Devices (Drone/Robot) -->
+  <div class="setting-item">
+    <label>Connected Devices</label>
+    <button id="connectDeviceBtn">View Devices</button>
+  </div>
+
+  <!-- ✅ CONNECTED DRONE SECTION -->
+  <section class="connected-drone-box">
+    <h3>Connected Drone</h3>
+    <div class="drone-status">
+      <p>Model: <strong>VX Prime X9</strong></p>
+      <p>Status: <span id="droneStatus" class="status-dot green">🟢 Active</span></p>
+      <p>Last Sync: <span id="lastSync">Just now</span></p>
+    </div>
+
+    <div class="alias-entry">
+      <label>Give your drone up to 3 call-names (nicknames it will respond to):</label>
+      <input type="text" id="alias1" placeholder="e.g. FalconX">
+      <input type="text" id="alias2" placeholder="e.g. Jetster">
+      <input type="text" id="alias3" placeholder="e.g. Buddy AI">
+      <button onclick="saveAliases()">Save Call Names</button>
+      <p id="aliasConfirm"></p>
+    </div>
+  </section>
+
+  <!-- Avatar --><!-- Apply as Seller -->
+<div class="setting-item">
+  <label>Become a Vixor Partner?</label>
+  <button onclick="window.location.href='seller-request.html'">Apply as Seller</button>
+</div>
+
+  <!-- Backup & Restore -->
+  <div class="setting-item">
+    <label>Backup Account</label>
+    <button id="backupBtn">Backup</button>
+  </div>
+
+  <div class="setting-item">
+    <label>Restore Account</label>
+    <button id="restoreBtn">Restore</button>
+  </div>
+
+  <!-- Terms of Service -->
+  <div class="setting-item">
+    <label>Terms and Policies</label>
+    <button id="termsBtn">View</button>
+  </div>
+
+</section>
+
+<script src="settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* Vixor Core Progress Page Styling */
+
+/* Base */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #ffffff;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(to right, #111, #222);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #00ffff;
+  }
+  
+  nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #00ffff;
+  }
+  
+  /* Progress Container */
+  .progress-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  }
+  
+  .progress-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00ffff;
+    font-size: 2.2rem;
+  }
+  
+  /* Each Progress Bar */
+  .progress-bar {
+    margin-bottom: 30px;
+  }
+  
+  .progress-bar label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+  }
+  
+  .bar {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+  }
+  
+  .fill {
+    background: linear-gradient(to right, #00ffff, #0066ff);
+    height: 100%;
+    width: 0;
+    transition: width 1s ease-in-out;
+  }
+  
+  .progress-bar span {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #00cccc;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .progress-container {
+      margin: 20px;
+      padding: 20px;
+    }
+  }
+  

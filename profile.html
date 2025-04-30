@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile - Vixor Core</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">Vixor Core</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="settings.html">Settings</a>
+    <a href="logout.html">Logout</a>
+  </nav>
+</header>
+
+<main class="profile-container">
+  <h2>Your Profile</h2>
+
+  <!-- Profile Avatar -->
+  <div class="profile-avatar">
+    <img src="images/default-avatar.png" alt="Avatar" id="profilePic" />
+    <button id="changeAvatarBtn">Change Avatar</button>
+  </div>
+
+  <!-- User Info -->
+  <div class="info-field">
+    <label>ID:</label>
+    <span id="userID">VX-USER-20250001</span>
+  </div>
+
+  <div class="info-field">
+    <label>Account Type:</label>
+    <span id="accountTag">Standard User</span>
+  </div>
+
+  <div class="info-field">
+    <label>Level:</label>
+    <span id="accountLevel">N/A</span>
+  </div>
+
+  <div class="info-field">
+    <label>Username:</label>
+    <input type="text" id="username" value="Jaydon-VX" readonly />
+  </div>
+
+  <div class="info-field">
+    <label>Phone Number:</label>
+    <input type="text" id="phone" value="+2347012345678" readonly />
+  </div>
+
+  <div class="info-field">
+    <label>Email:</label>
+    <input type="email" id="email" value="jaydonvx@example.com" readonly />
+  </div>
+
+  <!-- Profile Progress -->
+  <div class="progress-bar-container">
+    <label>Profile Completion:</label>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill" style="width: 70%;"></div>
+    </div>
+    <small><span id="progressPercent">70%</span> complete</small>
+  </div>
+
+  <!-- Secure Edit Button -->
+  <button id="editProfileBtn">Edit Username / Phone</button>
+
+</main>
+
+<script src="profile.js"></script>
+</body>
+</html>

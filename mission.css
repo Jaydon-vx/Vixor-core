@@ -1,0 +1,93 @@
+/* Vixor Core Mission Page Styling */
+
+/* Base */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #ffffff;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(to right, #111, #222);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #00ffff;
+  }
+  
+  nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #00ffff;
+  }
+  
+  /* Mission Container */
+  .mission-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  }
+  
+  .mission-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #00ffff;
+    font-size: 2.2rem;
+  }
+  
+  .mission-container p {
+    margin: 15px 0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #ccc;
+  }
+  
+  .mission-container .quote {
+    margin-top: 30px;
+    text-align: center;
+    font-style: italic;
+    color: #00cccc;
+    font-size: 1.2rem;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .mission-container {
+      margin: 20px;
+      padding: 20px;
+    }
+  }
+ 
+  
+
+
+
+
+  
+  drones.push({
+    name: "Vixor-X Enhanced Model",
+    category: "SkyBots",
+    img: "images/vixor-x-enhanced.jpg",
+    description: "An upgraded version of the Vixor-X Drone with enhanced flight range and more advanced AI capabilities."
+  });

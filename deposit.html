@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deposit - Vixor Core</title>
+  <link rel="stylesheet" href="deposit.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Vixor Core</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="mission.html">Mission</a>
+    <a href="profile.html">Profile</a>
+    <a href="settings.html">Settings</a>
+    <a href="logout.html">Logout</a>
+  </nav>
+</header>
+
+<section class="deposit-container">
+  <h2>Deposit to Order Your Drone</h2>
+
+  <p>To secure your product order, kindly deposit using your preferred currency.</p>
+
+  <form id="depositForm">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" required>
+
+    <label for="amount">Deposit Amount:</label>
+    <input type="number" id="amount" required>
+
+    <label for="currency">Select Currency:</label>
+    <select id="currency" required>
+      <option value="NGN">₦ Nigerian Naira (NGN)</option>
+      <option value="USD">$ US Dollar (USD)</option>
+      <option value="EUR">€ Euro (EUR)</option>
+      <option value="GBP">£ British Pound (GBP)</option>
+      <option value="JPY">¥ Japanese Yen (JPY)</option>
+    </select>
+
+    <button type="submit">Proceed to Deposit</button>
+  </form>
+
+  <p class="note">* After deposit, you will receive order confirmation by email and instructions for next steps.</p>
+</section>
+
+<script src="deposit.js"></script>
+
+</body>
+</html>
