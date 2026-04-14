@@ -20,20 +20,40 @@ header {
   align-items: center;
   text-transform: uppercase;
   line-height: 1.5;
+
+  /* FIX ADDED (safe spacing control) */
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
+/* ===== LOGO ===== */
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
   color: #00ffff;
 }
 
+/* ===== NAV FIX (THIS WAS THE MAIN PROBLEM) ===== */
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  /* FIX ADDED */
+  gap: 10px;
+}
+
+/* NAV LINKS */
 nav a {
   margin: 0 12px;
   text-decoration: none;
   color: #00ffff;
   font-size: 1rem;
   transition: color 1.7s;
+
+  /* FIX ADDED (prevents crowding visual overlap) */
+  padding: 5px 8px;
+  border-radius: 6px;
 }
 
 nav a:hover {
@@ -45,6 +65,10 @@ nav a:hover {
 .dropdown {
   position: relative;
   display: inline-block;
+
+  /* FIX ADDED */
+  display: flex;
+  align-items: center;
 }
 
 .dropbtn {
