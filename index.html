@@ -6,29 +6,26 @@
   <title>Vixor Core - Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- Header -->
+  <!-- Top Navigation Header -->
   <header>
     <div class="logo">Vixor Core</div>
-
     <nav>
-      <a href="#nexus">Nexus</a>
-      <a href="#pulseai">PulseAI</a>
-      <a href="#skybots">Innovations</a>
-      <a href="#media">Media Center</a>
-
+      <a href="#nexus" id="nav-nexus">Nexus</a>
+      <a href="#pulseai" id="nav-pulseai">PulseAI</a>
+      <a href="#skybots" id="nav-skybots">Innovations</a>
+      <a href="#media" id="nav-media">Media Center</a>
       <div class="dropdown">
         <button class="dropbtn">More</button>
         <div class="dropdown-content">
-          <a href="settings.html">Settings</a>
-          <a href="mission.html">Mission</a>
-          <a href="token.html">Token</a>
-          <a href="reserve.html">Reserve</a>
-          <a href="roadmap.html">Roadmap</a>
-          <a href="help.html">Help</a>
-          <a href="contact.html">Contact Us</a>
+          <a href="settings.html" id="nav-settings">Settings</a>
+          <a href="mission.html" id="nav-mission">Mission</a>
+          <a href="token.html" id="nav-token">Token</a>
+          <a href="reserve.html" id="nav-reserve">Reserve</a>
+          <a href="roadmap.html" id="nav-roadmap">Roadmap</a>
+          <a href="help.html" id="nav-help">Help</a>
+          <a href="contact.html" id="nav-contact">Contact Us</a>
         </div>
       </div>
     </nav>
@@ -41,29 +38,31 @@
 
   <!-- Sidebar -->
   <button id="toggleSidebarBtn">☰</button>
-
   <aside id="sidebar">
     <a href="profile.html">Profile</a>
     <a href="notifications.html">Notifications</a>
     <a href="language.html">Language</a>
     <a href="deposit.html">Deposit Funds</a>
-    <a href="#transact">Transact</a>
-    <a href="#fleet">Drone Fleet</a>
+    <a href="#transact" id="nav-transact">Transact</a>
+    <a href="#fleet" id="nav-fleet">Drone Fleet</a>
     <a href="logout.html">Logout</a>
-
     <div id="clock"></div>
   </aside>
 
-  <!-- Search -->
+  <!-- Color Theme -->
+  <div id="color-theme-slider">
+    <div class="color-handle" draggable="true"></div>
+  </div>
+
+  <!-- Search Filter -->
   <div class="search-filter-wrapper">
     <input type="text" id="searchInput" placeholder="Search drones..." />
-
     <select id="filterSelect">
       <option value="all">All Categories</option>
       <option value="SkyBots">SkyBots</option>
       <option value="PulseAI">PulseAI</option>
       <option value="Nexus">Nexus</option>
-      <option value="space">Space Tech</option>
+      <option value="space tech">Space Tech</option>
     </select>
   </div>
 
@@ -72,49 +71,35 @@
 
   <!-- Footer -->
   <footer>
-    <p>Vixor Core © 2026 | All rights reserved.</p>
+    <p>Vixor Core &copy; 2025 | All rights reserved.</p>
   </footer>
 
   <!-- Script -->
+  <script src="main.js"></script>
+
+  <!-- Rotating Script -->
   <script>
-    const messages = [
+    const rotatingMessages = [
       "🚀 Welcome to Vixor Core!",
-      "💸 Deposit Funds Anytime!",
-      "🧾 Complete Your Profile!",
-      "🛰️ New drones coming soon!",
-      "🎁 Invite friends & earn rewards!"
+      "💸 Would you like to deposit to your account?",
+      "🧾 Complete your profile to access more features!",
+      "🛰️ New drones launching weekly!",
+      "🎁 Invite friends to earn rewards!",
+      "🌍 Now supporting 20+ languages!",
+      "🔐 Stay safe: enable 2FA in settings!",
+      "🛠️ Join our AI Dev Program – coming soon!",
+      "💡 Tip: Click 'More' to see all extra features.",
+      "💬 VX AI bots now support voice response!"
     ];
 
-    let i = 0;
-    const text = document.getElementById("rotatingText");
+    let msgIndex = 0;
+    const rotatingText = document.getElementById("rotatingText");
 
     setInterval(() => {
-      text.style.opacity = "0";
-
-      setTimeout(() => {
-        i = (i + 1) % messages.length;
-        text.textContent = messages[i];
-        text.style.opacity = "1";
-      }, 400);
-    }, 3000);
-
-    // sidebar toggle
-    const sidebar = document.getElementById("sidebar");
-    const btn = document.getElementById("toggleSidebarBtn");
-
-    btn.onclick = () => {
-      sidebar.classList.toggle("open");
-    };
-
-    // clock
-    function clock() {
-      document.getElementById("clock").textContent =
-        new Date().toLocaleTimeString();
-    }
-
-    setInterval(clock, 1000);
-    clock();
+      msgIndex = (msgIndex + 1) % rotatingMessages.length;
+      rotatingText.textContent = rotatingMessages[msgIndex];
+    }, 4000);
   </script>
 
 </body>
-    </html>
+  </html>
