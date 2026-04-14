@@ -9,7 +9,7 @@
 
 <body>
 
-  <!-- ===== HEADER ===== -->
+  <!-- Header -->
   <header>
     <div class="logo">Vixor Core</div>
 
@@ -20,7 +20,7 @@
       <a href="#media">Media Center</a>
 
       <div class="dropdown">
-        <button class="dropbtn" type="button">More</button>
+        <button class="dropbtn">More</button>
         <div class="dropdown-content">
           <a href="settings.html">Settings</a>
           <a href="mission.html">Mission</a>
@@ -28,21 +28,20 @@
           <a href="reserve.html">Reserve</a>
           <a href="roadmap.html">Roadmap</a>
           <a href="help.html">Help</a>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html">Contact Us</a>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- ===== ROTATING BANNER ===== -->
+  <!-- Rotating Banner -->
   <section class="rotating-banner">
     <p id="rotatingText">🚀 Welcome to Vixor Core!</p>
   </section>
 
-  <!-- ===== SIDEBAR BUTTON ===== -->
+  <!-- Sidebar -->
   <button id="toggleSidebarBtn">☰</button>
 
-  <!-- ===== SIDEBAR ===== -->
   <aside id="sidebar">
     <a href="profile.html">Profile</a>
     <a href="notifications.html">Notifications</a>
@@ -55,9 +54,10 @@
     <div id="clock"></div>
   </aside>
 
-  <!-- ===== SEARCH FILTER ===== -->
+  <!-- Search -->
   <div class="search-filter-wrapper">
     <input type="text" id="searchInput" placeholder="Search drones..." />
+
     <select id="filterSelect">
       <option value="all">All Categories</option>
       <option value="SkyBots">SkyBots</option>
@@ -67,59 +67,54 @@
     </select>
   </div>
 
-  <!-- ===== MAIN CONTENT ===== -->
+  <!-- Content -->
   <div class="container" id="content"></div>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- Footer -->
   <footer>
     <p>Vixor Core © 2026 | All rights reserved.</p>
   </footer>
 
-  <!-- ===== SCRIPT ===== -->
+  <!-- Script -->
   <script>
-    // Rotating messages
-    const rotatingMessages = [
+    const messages = [
       "🚀 Welcome to Vixor Core!",
-      "💸 Deposit funds anytime!",
-      "🧾 Complete your profile!",
-      "🛰️ New drones launching!",
-      "🎁 Invite friends & earn!",
-      "🌍 Now supporting global users!",
-      "🔐 Enable 2FA for safety!",
-      "💡 Explore More section!"
+      "💸 Deposit Funds Anytime!",
+      "🧾 Complete Your Profile!",
+      "🛰️ New drones coming soon!",
+      "🎁 Invite friends & earn rewards!"
     ];
 
-    let msgIndex = 0;
-    const rotatingText = document.getElementById("rotatingText");
+    let i = 0;
+    const text = document.getElementById("rotatingText");
 
     setInterval(() => {
-      rotatingText.style.opacity = "0";
+      text.style.opacity = "0";
 
       setTimeout(() => {
-        msgIndex = (msgIndex + 1) % rotatingMessages.length;
-        rotatingText.textContent = rotatingMessages[msgIndex];
-        rotatingText.style.opacity = "1";
+        i = (i + 1) % messages.length;
+        text.textContent = messages[i];
+        text.style.opacity = "1";
       }, 400);
     }, 3000);
 
-    // Sidebar toggle
+    // sidebar toggle
     const sidebar = document.getElementById("sidebar");
-    const toggleBtn = document.getElementById("toggleSidebarBtn");
+    const btn = document.getElementById("toggleSidebarBtn");
 
-    toggleBtn.onclick = () => {
+    btn.onclick = () => {
       sidebar.classList.toggle("open");
     };
 
-    // Clock
-    function updateClock() {
-      const clock = document.getElementById("clock");
-      const now = new Date();
-      clock.textContent = now.toLocaleTimeString();
+    // clock
+    function clock() {
+      document.getElementById("clock").textContent =
+        new Date().toLocaleTimeString();
     }
 
-    setInterval(updateClock, 1000);
-    updateClock();
+    setInterval(clock, 1000);
+    clock();
   </script>
 
 </body>
-                                        </html>
+    </html>
