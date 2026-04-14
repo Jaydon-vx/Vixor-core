@@ -5,109 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vixor Core - Home</title>
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    /* Rotating Banner */
-    .rotating-banner {
-      text-align: center;
-      background-color: #111;
-      padding: 12px 0;
-      font-size: 1.1rem;
-      color: #00ffff;
-      font-weight: bold;
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
-    }
-
-    #rotatingText {
-      transition: opacity 0.5s ease;
-    }
-
-    /* Sidebar Toggle Button */
-    #toggleSidebarBtn {
-      position: fixed;
-      top: 80px;
-      left: 15px;
-      z-index: 1000;
-      background: #00ffff;
-      color: #000;
-      border: none;
-      padding: 10px 14px;
-      font-size: 20px;
-      cursor: pointer;
-      border-radius: 6px;
-      box-shadow: 0 0 10px rgba(0,255,255,0.4);
-    }
-
-    /* Sidebar */
-    #sidebar {
-      position: fixed;
-      top: 0;
-      left: -260px;
-      width: 250px;
-      height: 100%;
-      background: #111;
-      padding: 80px 20px 20px;
-      transition: left 0.3s ease;
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    #sidebar a {
-      color: #00ffff;
-      text-decoration: none;
-      font-size: 16px;
-    }
-
-    #sidebar.active {
-      left: 0;
-    }
-
-    #clock {
-      margin-top: 20px;
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    /* Search + Filter */
-    .search-filter-wrapper {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      margin: 30px 20px;
-      flex-wrap: wrap;
-    }
-
-    #searchInput,
-    #filterSelect {
-      padding: 10px;
-      border: 1px solid #00ffff;
-      border-radius: 6px;
-      outline: none;
-    }
-
-    /* Main Content */
-    .container {
-      min-height: 300px;
-      padding: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      color: #fff;
-      margin-top: 30px;
-    }
-  </style>
 </head>
+
 <body>
 
-  <!-- Top Navigation Header -->
+  <!-- ===== HEADER ===== -->
   <header>
     <div class="logo">Vixor Core</div>
+
     <nav>
       <a href="#nexus">Nexus</a>
       <a href="#pulseai">PulseAI</a>
@@ -115,7 +20,7 @@
       <a href="#media">Media Center</a>
 
       <div class="dropdown">
-        <button type="button" class="dropbtn">More</button>
+        <button class="dropbtn" type="button">More</button>
         <div class="dropdown-content">
           <a href="settings.html">Settings</a>
           <a href="mission.html">Mission</a>
@@ -123,19 +28,21 @@
           <a href="reserve.html">Reserve</a>
           <a href="roadmap.html">Roadmap</a>
           <a href="help.html">Help</a>
-          <a href="contact.html">Contact Us</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- Rotating Banner -->
+  <!-- ===== ROTATING BANNER ===== -->
   <section class="rotating-banner">
     <p id="rotatingText">🚀 Welcome to Vixor Core!</p>
   </section>
 
-  <!-- Sidebar -->
+  <!-- ===== SIDEBAR BUTTON ===== -->
   <button id="toggleSidebarBtn">☰</button>
+
+  <!-- ===== SIDEBAR ===== -->
   <aside id="sidebar">
     <a href="profile.html">Profile</a>
     <a href="notifications.html">Notifications</a>
@@ -144,15 +51,11 @@
     <a href="#transact">Transact</a>
     <a href="#fleet">Drone Fleet</a>
     <a href="logout.html">Logout</a>
+
     <div id="clock"></div>
   </aside>
 
-  <!-- Color Theme Control -->
-  <div id="color-theme-slider">
-    <div class="color-handle" draggable="true"></div>
-  </div>
-
-  <!-- Search and Filter -->
+  <!-- ===== SEARCH FILTER ===== -->
   <div class="search-filter-wrapper">
     <input type="text" id="searchInput" placeholder="Search drones..." />
     <select id="filterSelect">
@@ -160,31 +63,30 @@
       <option value="SkyBots">SkyBots</option>
       <option value="PulseAI">PulseAI</option>
       <option value="Nexus">Nexus</option>
-      <option value="space tech">Space Tech</option>
+      <option value="space">Space Tech</option>
     </select>
   </div>
 
-  <!-- Main Content -->
+  <!-- ===== MAIN CONTENT ===== -->
   <div class="container" id="content"></div>
 
-  <!-- Footer -->
+  <!-- ===== FOOTER ===== -->
   <footer>
-    <p>Vixor Core &copy; 2026 | All rights reserved.</p>
+    <p>Vixor Core © 2026 | All rights reserved.</p>
   </footer>
 
+  <!-- ===== SCRIPT ===== -->
   <script>
-    /* Rotating Banner Messages */
+    // Rotating messages
     const rotatingMessages = [
       "🚀 Welcome to Vixor Core!",
-      "💸 Would you like to deposit to your account?",
-      "🧾 Complete your profile to access more features!",
-      "🛰️ New drones launching weekly!",
-      "🎁 Invite friends to earn rewards!",
-      "🌍 Now supporting 20+ languages!",
-      "🔐 Stay safe: enable 2FA in settings!",
-      "🛠️ Join our AI Dev Program – coming soon!",
-      "💡 Tip: Click 'More' to see all extra features.",
-      "💬 VX AI bots now support voice response!"
+      "💸 Deposit funds anytime!",
+      "🧾 Complete your profile!",
+      "🛰️ New drones launching!",
+      "🎁 Invite friends & earn!",
+      "🌍 Now supporting global users!",
+      "🔐 Enable 2FA for safety!",
+      "💡 Explore More section!"
     ];
 
     let msgIndex = 0;
@@ -197,18 +99,18 @@
         msgIndex = (msgIndex + 1) % rotatingMessages.length;
         rotatingText.textContent = rotatingMessages[msgIndex];
         rotatingText.style.opacity = "1";
-      }, 500);
-    }, 4000);
+      }, 400);
+    }, 3000);
 
-    /* Sidebar Toggle */
+    // Sidebar toggle
     const sidebar = document.getElementById("sidebar");
     const toggleBtn = document.getElementById("toggleSidebarBtn");
 
-    toggleBtn.addEventListener("click", () => {
-      sidebar.classList.toggle("active");
-    });
+    toggleBtn.onclick = () => {
+      sidebar.classList.toggle("open");
+    };
 
-    /* Live Clock */
+    // Clock
     function updateClock() {
       const clock = document.getElementById("clock");
       const now = new Date();
@@ -220,4 +122,4 @@
   </script>
 
 </body>
-</html>
+                                        </html>
