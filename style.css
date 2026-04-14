@@ -1,117 +1,125 @@
-/* =========================
-   VIXOR CORE FULL CSS RESET
-========================= */
+/* Vixor Core Full Website Styling */
 
-/* BASE */
+/* ===== BASE ===== */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #0a0a0af1;
   color: #ffffff;
+  transition: background-color 0.5s ease;
 }
 
 /* ===== HEADER ===== */
 header {
   background: linear-gradient(to right, #111, #222);
-  padding: 15px 25px;
+  padding: 1rem 2rem;
+  font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-transform: uppercase;
+  line-height: 1.5;
+
+  /* FIX (only spacing issue) */
   flex-wrap: wrap;
+  gap: 15px;
 }
 
-/* LOGO */
+/* ===== LOGO ===== */
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
   color: #00ffff;
 }
 
-/* NAV */
+/* ===== NAV (FIX ONLY) ===== */
 nav {
   display: flex;
   align-items: center;
-  gap: 15px;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 /* NAV LINKS */
 nav a {
+  margin: 0 12px;
   text-decoration: none;
   color: #00ffff;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: 0.3s;
+  font-size: 1rem;
+  transition: color 1.7s;
 }
 
 nav a:hover {
-  background: rgba(0,255,255,0.15);
-  color: #fff;
+  color: #263636;
+  text-shadow: 0 0 10px #00ff7f;
 }
 
-/* DROPDOWN */
+/* ===== DROPDOWN ===== */
 .dropdown {
   position: relative;
+  display: inline-block;
 }
 
 .dropbtn {
-  background: #00ffff;
+  background-color: #2e5757;
+  color: white;
+  padding: 0.5rem 1rem;
   border: none;
-  padding: 8px 12px;
   cursor: pointer;
+  font-size: 1rem;
   font-weight: bold;
-  border-radius: 6px;
+  text-transform: uppercase;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background: #111;
-  min-width: 160px;
-  top: 40px;
-  right: 0;
-  border-radius: 6px;
-  overflow: hidden;
+  background-color: #444;
+  min-width: 180px;
+  z-index: 1;
 }
 
 .dropdown-content a {
+  color: #ccc;
+  padding: 12px 16px;
+  text-decoration: none;
   display: block;
-  padding: 10px;
-  color: white;
-}
-
-.dropdown-content a:hover {
-  background: #222;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* ROTATING BANNER */
+/* ===== ROTATING MESSAGE BANNER ===== */
 .rotating-banner {
-  background: #111;
+  background-color: #35a0a0;
+  padding: 10px 0;
   text-align: center;
-  padding: 12px;
-  color: #00ffff;
+  font-size: 1rem;
   font-weight: bold;
+  color: #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
 }
 
-#rotatingText {
-  transition: opacity 0.4s ease;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-100px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-/* SIDEBAR */
+/* ===== SIDEBAR ===== */
 #sidebar {
   position: fixed;
-  left: -260px;
   top: 0;
+  left: -250px;
   width: 250px;
   height: 100%;
   background: #111;
+  overflow-x: hidden;
+  transition: left 0.5s ease;
+  z-index: 999;
   padding-top: 60px;
-  transition: 0.4s;
 }
 
 #sidebar.open {
@@ -119,63 +127,67 @@ nav a:hover {
 }
 
 #sidebar a {
-  display: block;
-  padding: 15px;
-  color: #ccc;
+  padding: 15px 25px;
   text-decoration: none;
+  font-size: 1rem;
+  color: #ccc;
+  display: block;
+  transition: 0.3s;
+  text-transform: uppercase;
 }
 
 #sidebar a:hover {
-  background: #00ffff22;
-  color: #00ffff;
+  background-color: #355555;
+  color: black;
 }
 
-/* TOGGLE BUTTON */
+/* ===== SIDEBAR BUTTON ===== */
 #toggleSidebarBtn {
   position: fixed;
   top: 15px;
   left: 15px;
-  background: #00ffff;
+  background-color: #00ffff;
   border: none;
-  padding: 10px;
-  border-radius: 50%;
+  padding: 10px 12px;
   cursor: pointer;
+  border-radius: 50%;
+  z-index: 1000;
 }
 
-/* SEARCH */
+/* ===== SEARCH ===== */
 .search-filter-wrapper {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 20px;
-  flex-wrap: wrap;
+  margin: 1.5rem;
 }
 
-#searchInput,
-#filterSelect {
-  padding: 10px;
+input#searchInput, select#filterSelect {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
   border: none;
-  border-radius: 6px;
-  width: 200px;
+  width: 220px;
 }
 
-/* CONTENT */
+/* ===== CONTENT ===== */
 .container {
-  padding: 20px;
-  min-height: 200px;
+  padding: 2rem;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 15px;
-  background: #111;
-  color: #aaa;
+  padding: 1rem;
+  background-color: #111;
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
-/* CLOCK */
+/* ===== CLOCK ===== */
 #clock {
-  text-align: center;
+  font-size: 1.2rem;
   color: #00ffff;
-  margin-top: 20px;
-}
+  margin: 20px;
+  text-align: center;
+        }
