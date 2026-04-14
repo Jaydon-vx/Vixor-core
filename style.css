@@ -275,3 +275,111 @@ footer {
     width: 35px;
   }
 }
+
+
+/* ================================
+   VIXOR CORE FULL RESPONSIVE FIX
+   (ALL DEVICES SAFE PATCH)
+================================= */
+
+/* ===== LARGE LAPTOPS / BIG SCREENS ===== */
+@media (min-width: 1200px) {
+  header {
+    padding: 1rem 3rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+    margin: 0 14px;
+  }
+}
+
+/* ===== NORMAL LAPTOPS ===== */
+@media (max-width: 1199px) {
+  header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* ===== TABLETS ===== */
+@media (max-width: 900px) {
+  header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  nav {
+    justify-content: center;
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+}
+
+/* ===== MOBILE DEVICES ===== */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 5px 6px;
+  }
+
+  .dropbtn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
+
+/* ===== SMALL PHONES ===== */
+@media (max-width: 480px) {
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  nav a {
+    font-size: 0.75rem;
+    padding: 4px 5px;
+  }
+
+  header {
+    padding: 10px;
+  }
+    }
